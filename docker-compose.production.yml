@@ -12,7 +12,7 @@ services:
     volumes:
       - pg_data:/var/lib/postgresql/data
   backend:
-    image: blathata/kittygram_backend
+    image: blathata/kittygram_final-backend
     env_file: .env
     volumes:
       - static:/static/
@@ -20,13 +20,13 @@ services:
     depends_on:
       - db_1
   frontend:
-    image: blathata/kittygram_frontend
+    image: blathata/kittygram_final-frontend
     env_file: .env
     command: cp -r /app/build/. /static/
     volumes:
       - static:/static
   gateway:
-    image: blathata/kittygram_gateway
+    image: blathata/kittygram_final-gateway
     env_file: .env
     ports:
       - 9000:80
