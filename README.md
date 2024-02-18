@@ -21,7 +21,7 @@ git clone git@github.com:Blathata/kittygram_final.git
 
 Перейти в корневую директорию
 ```
-cd kittygram_final
+cd kittygram
 ```
 
 Создать файл .evn для хранения ключей:
