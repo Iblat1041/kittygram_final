@@ -29,18 +29,6 @@
 git clone git@github.com:Blathata/kittygram_final.git
 ```
 
-Генерируем секретный ключ:
-
-```
-Запускаем интерпретатор Python
-python manage.py shell
-Генерируем ключ
-from django.core.management.utils import get_random_secret_key
-get_random_secret_key()
-Создать папку .env в корне проекта
-Добавить в переменую SECRET_KEY=... сгенерированый ключ
-```
-
 Перейти в корневую директорию
 ```
 cd kittygram
@@ -52,8 +40,22 @@ cd kittygram
 POSTGRES_USER=django_user
 POSTGRES_PASSWORD=mysecretpassword
 POSTGRES_DB=django
-DB_HOST=db
+DB_HOST=db_1
 DB_PORT=5432
+SECRET_KEY= ...
+ALLOWED_HOSTS = 10.10.10.10, 127.0.0.1, localhost, domin
+DEBUG=False
+```
+
+Генерируем секретный ключ:
+
+```
+Запускаем интерпретатор Python
+python manage.py shell
+Генерируем ключ
+from django.core.management.utils import get_random_secret_key
+get_random_secret_key()
+Добавить в переменую в .evn SECRET_KEY=... сгенерированый ключ
 ```
 
 Запустить docker-compose.production:
