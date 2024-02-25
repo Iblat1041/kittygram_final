@@ -22,6 +22,13 @@
 <h2 align='center'>
   Как запустить проект:
 </h2>
+
+Клонировать репозиторий и перейти в него в командной строке:
+
+```
+git clone git@github.com:Blathata/kittygram_final.git
+```
+
 Генерируем секретный ключ:
 
 ```
@@ -30,12 +37,8 @@ python manage.py shell
 Генерируем ключ
 from django.core.management.utils import get_random_secret_key
 get_random_secret_key()
-```
-
-Клонировать репозиторий и перейти в него в командной строке:
-
-```
-git clone git@github.com:Blathata/kittygram_final.git
+Создать папку .env в корне проекта
+Добавить в переменую SECRET_KEY=... сгенерированый ключ
 ```
 
 Перейти в корневую директорию
