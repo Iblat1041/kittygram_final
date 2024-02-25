@@ -22,6 +22,16 @@
 <h2 align='center'>
   Как запустить проект:
 </h2>
+Генерируем секретный ключ:
+
+```
+Запускаем интерпретатор Python
+python manage.py shell
+Генерируем ключ
+from django.core.management.utils import get_random_secret_key
+get_random_secret_key()
+```
+
 Клонировать репозиторий и перейти в него в командной строке:
 
 ```
